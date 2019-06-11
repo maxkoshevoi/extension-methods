@@ -7,11 +7,11 @@ public static class RegexEx
         try
         {
             Regex.IsMatch(String.Empty, pattern);
-            return true;
         }
-        catch
+        catch (ArgumentException)
         {
             return false;
-        }
+        }            
+        return true;
     } 
 }
